@@ -97,7 +97,6 @@ Run class() on each result. What data structure does R “downgrade” a single 
 ```{r}
 class(scores[1, ])
 class(scores[, "Ben"])
-
 ```
 When a single row or column is selected from a matrix, R automatically converts it to a numeric vector instead of keeping it as a matrix. I think R does this to make the result simpler and easier to work with since only one dimension remains.
 
@@ -112,6 +111,7 @@ Subsetting with scores >= 90 uses a logical condition, so R returns only the val
 # Part C — Matrix Properties and Operations
 ### TODO: Use dim(), nrow(), and ncol() on scores to report its dimensions
 ```{r}
+dim(scores)
 nrow(scores)
 ncol(scores)
 ```
@@ -145,8 +145,7 @@ a*b
 ### TODO: Perform true matrix multiplication of a and b using %*%
 ### Compare this result to a * b above -- they should be different
 ```{r}
-a%%b
-
+a%*%b
 ```
 
 Question #5
